@@ -14,19 +14,8 @@ function Header() {
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
 
-  const [theme, setTheme] = useState("light-theme");
   let category = ["business", "entertainment", "general", "health", "science", "sports", "technology","politics"]
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme])
-  function toggleTheme() {
-    if (theme === "light-theme") {
-      setTheme("dark-theme")
-    }
-    else {
-      setTheme("light-theme")
-    }
-  }
+  
   return (
     <header className="">
      <nav class="fixed top-0 left-0 w-full h-auto bg-gray-800 z-10 flex items-center justify-around">
@@ -74,17 +63,7 @@ function Header() {
               })}
             </ul>
           </li>
-          <li><Link className="no-underline font-semibold" to="#" onClick={() => { toggleTheme() }}>
-      
-          <input type="checkbox" class="checkbox" id="checkbox"/>
-             <label for="checkbox" class="checkbox-label">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <span class="ball"></span>
-          </label>
           
-
-          </Link></li>
         </ul>
         <div className={active ? "ham-burger z-index-100 ham-open" : "ham-burger z-index-100"} onClick={() => { setActive(!active) }}>
           <span className="lines line-1"></span>
