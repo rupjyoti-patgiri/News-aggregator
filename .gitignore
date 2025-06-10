@@ -1,0 +1,16 @@
+# Ignore client (frontend) dependencies and builds
+/client/node_modules/
+/client/dist/
+/client/build/
+/client/.env
+
+# Ignore server (backend) dependencies and builds
+/server/node_modules/
+/server/.env
+/server/logs/
+/server/coverage/
+
+# System/editor files
+.DS_Store
+.vscode/
+*.log
